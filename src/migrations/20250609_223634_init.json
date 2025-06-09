@@ -21432,7 +21432,7 @@
           "type": "varchar",
           "primaryKey": false,
           "notNull": false,
-          "default": "'info@earnmwachangu.com'"
+          "default": "'info@nacitlilongwe.com'"
         },
         "contact_info_phone": {
           "name": "contact_info_phone",
@@ -21516,7 +21516,7 @@
           "type": "varchar",
           "primaryKey": false,
           "notNull": false,
-          "default": "'© EarnMwachange 2024.'"
+          "default": "'© Nacit Lilongwe 2024.'"
         },
         "external_copyright": {
           "name": "external_copyright",

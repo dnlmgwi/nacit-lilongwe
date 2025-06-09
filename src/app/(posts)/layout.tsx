@@ -6,8 +6,8 @@ import { PostsHeader } from '@/components/PostsHeader'
 import '../globals.css'
 
 export const metadata: Metadata = {
-  title: 'Earn Mwachangu',
-  description: 'Earn Mwachangu Official Site',
+  title: 'Nacit Lilongwe',
+  description: 'Nacit Lilongwe Official Site',
 }
 
 // Force light mode for the entire posts section

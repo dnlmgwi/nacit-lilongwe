@@ -7,7 +7,7 @@ const CLOUDFLARE_API_BASE_URL = 'https://api.cloudflare.com/client/v4/accounts'
 // These are now server-side environment variables
 const ACCOUNT_ID = process.env.CLOUDFLARE_ACCOUNT_ID
 const API_TOKEN = process.env.CLOUDFLARE_API_TOKEN
-const RAG_ID = process.env.CLOUDFLARE_RAG_ID || 'earnmwachangu-e07a' // Default RAG ID
+const RAG_ID = process.env.CLOUDFLARE_RAG_ID || 'nacit-lilongwe-576b' // Default RAG ID
 
 interface CloudflareAIRequest {
   query: string

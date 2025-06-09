@@ -128,12 +128,12 @@ export default async function PostsPage({ params, searchParams }: PageProps) {
 
 export function generateMetadata(): Metadata {
   return {
-    title: `Posts | Earn Mwachangu`,
-    description: 'All posts from Earn Mwachangu.',
+    title: `Posts | Nacit Lilongwe`,
+    description: 'All posts from Nacit Lilongwe.',
     openGraph: {
       type: 'website',
-      title: 'Posts | Earn Mwachangu',
-      description: 'All posts from Earn Mwachangu.',
+      title: 'Posts | Nacit Lilongwe',
+      description: 'All posts from Nacit Lilongwe.',
     },
   }
 }

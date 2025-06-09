@@ -8,7 +8,7 @@ import LegalPageClient from './page.client'
 import type { Page, Term } from '@/payload-types'
 
 export const metadata: Metadata = {
-  title: 'Legal Information | Earn Mwachangu',
+  title: 'Legal Information | Nacit Lilongwe',
   description: 'Legal information, terms of service, privacy policy, and other legal documents.',
 }
 

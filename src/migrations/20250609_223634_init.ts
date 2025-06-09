@@ -2076,7 +2076,7 @@ export async function up({ db, payload, req }: MigrateUpArgs): Promise<void> {
   	"product_links_title" varchar DEFAULT 'Products',
   	"company_links_title" varchar DEFAULT 'Company',
   	"resource_links_title" varchar DEFAULT 'Resources',
-  	"contact_info_email" varchar DEFAULT 'info@earnmwachangu.com',
+  	"contact_info_email" varchar DEFAULT 'info@nacitlilongwe.com',
   	"contact_info_phone" varchar DEFAULT '0990167497',
   	"contact_info_alternative_phone" varchar DEFAULT '0998484630',
   	"contact_info_location" varchar DEFAULT 'Plot 47/378, Area 47 Sector 1, Lilongwe',
@@ -2088,7 +2088,7 @@ export async function up({ db, payload, req }: MigrateUpArgs): Promise<void> {
   	"social_links_twitter" varchar DEFAULT '#',
   	"social_links_instagram" varchar DEFAULT '#',
   	"social_links_youtube" varchar DEFAULT '#',
-  	"copyright" varchar DEFAULT '© EarnMwachange 2024.',
+  	"copyright" varchar DEFAULT '© Nacit Lilongwe 2024.',
   	"external_copyright" varchar,
   	"updated_at" timestamp(3) with time zone,
   	"created_at" timestamp(3) with time zone

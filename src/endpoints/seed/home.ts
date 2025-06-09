@@ -47,7 +47,7 @@ export const home: (args: HomeArgs) => RequiredDataFromCollectionSlug<'pages'> =
                   format: 0,
                   mode: 'normal',
                   style: '',
-                  text: 'Earn Mwachangu',
+                  text: 'Nacit Lilongwe',
                   version: 1,
                 },
               ],
@@ -666,9 +666,9 @@ export const home: (args: HomeArgs) => RequiredDataFromCollectionSlug<'pages'> =
       },
     ],
     meta: {
-      description: 'Earn Mwachangu',
+      description: 'Nacit Lilongwe',
       image: heroImage.id,
-      title: 'Earn Mwachangu',
+      title: 'Nacit Lilongwe',
     },
     title: 'Home',
   }

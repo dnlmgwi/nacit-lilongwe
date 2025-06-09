@@ -17,13 +17,13 @@ export const Logo = (props: Props) => {
 
   return (
     <Image
-      alt="Mwachangu Logo"
+      alt="NACIT Lilongwe Logo"
       width={4013}
       height={1825}
       loading={loading}
       priority={priority === 'high'}
       className={clsx('max-w-[12rem] w-full', className)}
-      src={props.theme ? '/images/earn_mwachangu_logo.webp' : '/images/earn_mwachangu.webp'}
+      src={props.theme ? '/images/nacit_lilongwe_logo.webp' : '/images/nacit_lilongwe.webp'}
       style={{ aspectRatio: '4013 / 1825', height: 'auto' }}
     />
   )

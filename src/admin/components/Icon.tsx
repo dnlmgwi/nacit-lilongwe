@@ -6,7 +6,7 @@ const Logo: React.FC = () => {
     <div style={{ padding: '12px 0' }}>
       <Image
         src="/favicon-light.svg"
-        alt="Earn Mwachangu Logo"
+        alt="Nacit Lilongwe Logo"
         width={48}
         height={48}
         style={{ display: 'block' }}

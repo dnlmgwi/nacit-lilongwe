@@ -247,7 +247,7 @@ The seed script will also create a demo user for demonstration purposes only:
   - Password: `password`
 
   - Demo Super-Admin
-  - Email: `admin@mwachangu.com`
+  - Email: `admin@nacitlilongwe.com`
   - Password: `admin123`
 
   DELETE ONCE ACCESSED

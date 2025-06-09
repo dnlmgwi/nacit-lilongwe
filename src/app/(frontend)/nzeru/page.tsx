@@ -172,12 +172,12 @@ export default async function BlogPage({ params, searchParams }: PageProps) {
 
 export function generateMetadata(): Metadata {
   return {
-    title: `Earn Mwachangu | Nzeru`,
-    description: 'Read the latest articles, tips, and insights from Earn Mwachangu.',
+    title: `Nacit Lilongwe | Nzeru`,
+    description: 'Read the latest articles, tips, and insights from Nacit Lilongwe.',
     openGraph: {
       type: 'website',
-      title: 'Earn Mwachangu | Nzeru',
-      description: 'Read the latest articles, tips, and insights from Earn Mwachangu.',
+      title: 'Nacit Lilongwe | Nzeru',
+      description: 'Read the latest articles, tips, and insights from Nacit Lilongwe.',
     },
   }
 }

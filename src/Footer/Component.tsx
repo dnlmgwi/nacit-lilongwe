@@ -15,7 +15,7 @@ export async function Footer() {
   const companyLinks = footerData?.companyLinks || { title: 'Company', links: [] }
   const resourceLinks = footerData?.resourceLinks || { title: 'Resources', links: [] }
   const contactInfo = footerData?.contactInfo || {
-    email: 'info@earnmwachangu.com',
+    email: 'info@nacitlilongwe.com',
     phone: '0990167497',
     alternativePhone: '0998484630',
     location: 'Plot 47/378, Area 47 Sector 1, Lilongwe',
@@ -32,7 +32,7 @@ export async function Footer() {
     youtube: footerData?.socialLinks?.youtube || '',
     linkedin: footerData?.socialLinks?.linkedin || '',
   }
-  const copyright = `© Earn Mwachangu ${new Date().getFullYear()}. ${footerData?.copyright}`
+  const copyright = `© Nacit Lilongwe ${new Date().getFullYear()}. ${footerData?.copyright}`
 
   return (
     <footer className="mt-auto bg-gray-50 text-brand-dark-green dark:text-white">

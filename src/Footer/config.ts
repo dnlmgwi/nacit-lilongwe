@@ -70,7 +70,7 @@ export const Footer: GlobalConfig = {
         {
           name: 'email',
           type: 'text',
-          defaultValue: 'info@earnmwachangu.com',
+          defaultValue: 'info@nacitlilongwe.com',
           required: true,
         },
         {
@@ -165,7 +165,7 @@ export const Footer: GlobalConfig = {
     {
       name: 'copyright',
       type: 'text',
-      defaultValue: '© EarnMwachange 2024.',
+      defaultValue: '© Nacit Lilongwe 2024.',
       required: false,
     },
     {

@@ -26,7 +26,7 @@ export const generateMeta = async (args: {
 
   const ogImage = getImageURL(doc?.meta?.image)
 
-  const title = doc?.meta?.title ? doc?.meta?.title + ' | Earn Mwachangu' : 'Earn Mwachangu'
+  const title = doc?.meta?.title ? doc?.meta?.title + ' | Nacit Lilongwe' : 'Nacit Lilongwe'
 
   return {
     description: doc?.meta?.description,

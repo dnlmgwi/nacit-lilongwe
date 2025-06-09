@@ -21,7 +21,7 @@ export const FAQBlock: React.FC<FAQBlockProps> = ({
   preHeading = 'FAQs',
   faqItems = [
     {
-      question: 'Who is eligible to use Earn Mwachangu?',
+      question: 'Who is eligible to use Nacit Lilongwe?',
       answer:
         'Employees of partner companies who have signed up for our service. Your employer needs to be enrolled in our program for you to access your earned wages.',
       id: '1',
@@ -44,7 +44,7 @@ export const FAQBlock: React.FC<FAQBlockProps> = ({
       id: '4',
     },
     {
-      question: 'Can I use Earn Mwachangu to pay bills?',
+      question: 'Can I use Nacit Lilongwe to pay bills?',
       answer:
         'Yes, you can use the funds you withdraw for any purpose, including paying bills. The money is transferred to your bank account, and you can use it as you would with your regular salary.',
       id: '5',

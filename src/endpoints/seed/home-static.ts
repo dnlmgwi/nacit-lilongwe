@@ -80,8 +80,8 @@ export const homeStatic: RequiredDataFromCollectionSlug<'pages'> = {
   //   },
   // },
   meta: {
-    description: 'Earn Mwachangu',
-    title: 'Earn Mwachangu',
+    description: 'Nacit Lilongwe',
+    title: 'Nacit Lilongwe',
   },
   title: 'Home',
   layout: [],
