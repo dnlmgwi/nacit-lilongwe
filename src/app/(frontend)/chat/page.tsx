@@ -12,7 +12,12 @@ import {
   SessionMessagesHeader,
 } from 'reachat'
 import { searchCloudflareAI } from '../../../services/cloudflareAIService'
-import { getCachedResponse, cacheResponse, recordFeedback, getSuggestedQuestions } from '../../../services/chatService'
+import {
+  getCachedResponse,
+  cacheResponse,
+  recordFeedback,
+  getSuggestedQuestions,
+} from '../../../services/chatService'
 import { customChatTheme } from './chatTheme'
 import { AnimatedText } from '../../../components/AnimatedText'
 
@@ -65,7 +70,7 @@ export default function ChatPage() {
         return [
           {
             id: DEFAULT_SESSION_ID,
-            title: 'Earn AI',
+            title: 'NACIT AI',
             createdAt: new Date(),
             updatedAt: new Date(),
             conversations: [] as Conversation[],
@@ -338,7 +343,6 @@ export default function ChatPage() {
           <div className="px-4 py-2 text-xs text-gray-500 dark:text-gray-400 border-t border-border text-center">
             <p>
               <strong>Disclaimer:</strong> This AI assistant is currently in active development.
-              Your feedback is highly appreciated to help us improve!
             </p>
           </div>
 

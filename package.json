@@ -65,6 +65,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
+    "@next/eslint-plugin-next": "^15.3.3",
     "@tailwindcss/typography": "^0.5.16",
     "@types/escape-html": "^1.0.4",
     "@types/node": "22.5.4",

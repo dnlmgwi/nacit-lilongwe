@@ -2,39 +2,39 @@ version: '3.8' # Updated to a more recent version, 3 is fine too
 
 services:
   payload:
-    image: node:18-alpine
+    image: node:22-alpine
     ports:
       - '3000:3000'
     volumes:
       - .:/home/node/app
       - node_modules:/home/node/app/node_modules
     working_dir: /home/node/app/
-    command: sh -c "yarn install && yarn dev"
+    command: sh -c "pnpm install && pnpm dev"
     depends_on:
-      - postgres # Changed from mongo
+      - postgres
     env_file:
-      - .env
-    environment: # Add or ensure your app uses these for DB connection
-      - DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
-      # Or individual variables if your app prefers:
-      # - POSTGRES_HOST=postgres
-      # - POSTGRES_PORT=5432
-      # - DB_USER=${POSTGRES_USER}
-      # - DB_PASSWORD=${POSTGRES_PASSWORD}
-      # - DB_NAME=${POSTGRES_DB}
+      - .env.docker
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=postgresql://${DB_USERNAME}:${DB_PASSWORD}@postgres:${DB_PORT}/${DB_DATABASE}
 
 
-  postgres: # New postgres service
-    image: postgres:15-alpine # Using postgres 15 alpine for a specific version
+  postgres:
+    image: postgres:15-alpine
     ports:
       - '5432:5432'
     volumes:
       - pgdata:/var/lib/postgresql/data
     environment:
-      POSTGRES_USER: ${POSTGRES_USER:-user} # Default to 'user' if not in .env
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-password} # Default to 'password' if not in .env
-      POSTGRES_DB: ${POSTGRES_DB:-mydb} # Default to 'mydb' if not in .env
+      POSTGRES_USER: ${DB_USERNAME:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-admin}
+      POSTGRES_DB: ${DB_DATABASE:-postgres}
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USERNAME:-postgres} -d ${DB_DATABASE:-postgres}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
     logging:
       driver: "json-file"
       options:
