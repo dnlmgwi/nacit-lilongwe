@@ -23,9 +23,10 @@ export const customChatTheme: ChatTheme = {
     message: {
       // Styling for individual messages (question, response, etc.)
       ...defaultTheme.messages.message,
-      question: twMerge(
+            question: twMerge(
         defaultTheme.messages.message?.question,
-        'bg-brand-mimosa text-brand-teal p-3 rounded-lg my-1',
+        // Changed to a blue background with white text for user messages
+        'bg-blue-600 dark:bg-blue-800 text-white p-3 rounded-lg my-1',
       ),
       response: twMerge(
         defaultTheme.messages.message?.response,
