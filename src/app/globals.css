@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* Keyframes for the first copy of text scrolling from right to left */
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Keyframes for the second copy of text scrolling from right to left */
+  @keyframes marquee2 {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+} 
+
+/* Featured Posts */
+.featured-post {
+  @apply relative;
+}
+
+.featured-post .aspect-\[16\/9\] {
+  @apply aspect-[16/10];
+}
+
+.featured-post h3 {
+  @apply text-2xl;
+}
+
+/* Force light mode for posts section */
+[data-theme='light'] {
+  color-scheme: light;
+}
+
+[data-theme='light'] * {
+  color-scheme: light !important;
+}
+
+/* Category Pills */
+.category-pill {
+  @apply px-6 py-2 rounded-full transition-colors font-medium text-base;
+  @apply border border-brand-dark-green bg-white text-brand-dark-green;
+  @apply hover:bg-brand-dark-green hover:text-brand-white;
+  @apply no-underline;
+}
+
+.category-pill.active {
+  @apply bg-brand-dark-green text-white border-brand-dark-green;
+  @apply hover:bg-brand-teal;
+}
