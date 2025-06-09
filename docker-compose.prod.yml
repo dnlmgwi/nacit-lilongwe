@@ -27,22 +27,22 @@ services:
         max-size: "10m"
         max-file: "3"
 
-  # Uncomment and configure this if you need a PostgreSQL database
-  # postgres:
-  #   image: postgres:15-alpine
-  #   restart: unless-stopped
-  #   environment:
-  #     POSTGRES_USER: ${DB_USERNAME:-postgres}
-  #     POSTGRES_PASSWORD: ${DB_PASSWORD:-admin}
-  #     POSTGRES_DB: ${DB_DATABASE:-postgres}
-  #   volumes:
-  #     - postgres_data:/var/lib/postgresql/data
-  #   healthcheck:
-  #     test: ["CMD-SHELL", "pg_isready -U ${DB_USERNAME:-postgres} -d ${DB_DATABASE:-postgres}"]
-  #     interval: 10s
-  #     timeout: 5s
-  #     retries: 5
+# Uncomment and configure this if you need a PostgreSQL database
+  postgres:
+    image: postgres:15-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${DB_USERNAME:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-admin}
+      POSTGRES_DB: ${DB_DATABASE:-postgres}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USERNAME:-postgres} -d ${DB_DATABASE:-postgres}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
 # Uncomment if using PostgreSQL
-# volumes:
-#   postgres_data:
+volumes:
+  postgres_data:
