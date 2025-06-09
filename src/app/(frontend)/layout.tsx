@@ -37,7 +37,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             }}
           />
 
-          {/* <NotificationBanner /> */}
+          <NotificationBanner />
           <SmoothScrollProvider offset={80} duration={1} ease="power2.out">
             {/* <Header /> */}
             {children}
