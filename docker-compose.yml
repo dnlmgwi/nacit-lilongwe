@@ -1,4 +1,4 @@
-version: '3'
+version: '3.8' # Updated to a more recent version, 3 is fine too
 
 services:
   payload:
@@ -11,21 +11,36 @@ services:
     working_dir: /home/node/app/
     command: sh -c "yarn install && yarn dev"
     depends_on:
-      - mongo
+      - postgres # Changed from mongo
     env_file:
       - .env
+    environment: # Add or ensure your app uses these for DB connection
+      - DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
+      # Or individual variables if your app prefers:
+      # - POSTGRES_HOST=postgres
+      # - POSTGRES_PORT=5432
+      # - DB_USER=${POSTGRES_USER}
+      # - DB_PASSWORD=${POSTGRES_PASSWORD}
+      # - DB_NAME=${POSTGRES_DB}
 
-  mongo:
-    image: mongo:latest
+
+  postgres: # New postgres service
+    image: postgres:15-alpine # Using postgres 15 alpine for a specific version
     ports:
-      - '27017:27017'
-    command:
-      - --storageEngine=wiredTiger
+      - '5432:5432'
     volumes:
-      - data:/data/db
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-user} # Default to 'user' if not in .env
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-password} # Default to 'password' if not in .env
+      POSTGRES_DB: ${POSTGRES_DB:-mydb} # Default to 'mydb' if not in .env
+    restart: unless-stopped
     logging:
-      driver: none
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
 
 volumes:
-  data:
+  pgdata: # Changed from data to pgdata
   node_modules:
